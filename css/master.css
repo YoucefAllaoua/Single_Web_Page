@@ -1,0 +1,523 @@
+:root
+{
+    --main-color: #10cab7;
+}
+
+
+
+
+*
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: "work-sans",sans-serif;
+    
+}
+.parent
+{
+   background-color: rgb(231, 253, 246);
+
+}
+.container
+{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f1fdfb;
+    padding: 15px;
+    
+}
+@media  (min-width:768px)
+{    .container
+    {
+        width: 700px;
+       
+    }
+    
+}
+@media  (min-width:992px)
+{    .container
+    {
+        width: 970px;
+    }
+
+}
+@media  (min-width:1200px)
+{    .container
+    {
+        width: 1170px;
+    }
+
+}
+.header .container
+{
+    display: flex;
+    justify-content: space-between;
+     position: relative;
+    align-items: center;
+ 
+}
+.header .logo
+{
+    width: 60px;
+    height: 50px;
+}
+
+.header .links
+{
+    position: relative;
+}
+.header .links .icon
+{
+    display: flex;
+    justify-content: flex-end;
+    width: 30px;
+    flex-wrap: wrap;
+}
+.header .links .icon span
+{   
+   background-color: black;
+   margin-bottom: 5px;
+}
+.header .links .icon span:first-child
+{
+    height: 2px;
+    width: 100%;   
+}
+
+.header .links .icon span:nth-child(2)
+{
+    height: 2px;
+    width: 60%;
+    
+}
+.header .links .icon span:last-child
+{
+    height: 2px;
+    width: 100%;
+    
+}
+
+.header .links:hover .icon span:nth-child(2)
+{
+    height: 2px;
+    width: 100%;
+    
+}
+.header .container ul
+{
+   margin: 0px 0px;
+   background-color: beige;
+   position: absolute;
+   right: 0;
+   list-style: none;
+   min-width: 180px;
+  padding: 0px;
+  top: calc(100% + 20px);
+  display: none;
+  z-index: 10;
+}
+.header .links:hover ul
+{
+    display: initial;
+    
+}
+.header .container ul::before
+{
+    content: "";
+    width: 0px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: rgb(164, 219, 205) transparent transparent transparent;
+    height: 5px;
+    position: absolute;
+    right: 5px;
+    top: -15px;
+}
+.header .container ul li a
+{
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    color: rgb(112, 90, 62);
+    transition-duration: 0.3s;
+    
+} 
+.header .container ul li:not(:last-child)
+{
+    border-bottom: 1px rgb(0, 255, 234) solid;
+} 
+.header .container ul li a:hover
+{
+    padding: 25px;
+    color: rgb(59, 34, 34);
+    
+} 
+.landing
+  {
+    background-image: url(/photos/ph.jpg) ;
+    background-size: cover;
+    height: calc(95.5vh - 50px);
+    position: relative;
+    width: 100%;
+    min-width: 350px;
+    
+    
+   
+  
+  }
+  .landing .text 
+  {
+   
+ position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% ,-50% );
+  width: 320px;
+  max-width: 100%;
+  text-align: center;
+  
+  
+ }
+.landing .text h1
+  {
+   margin: 0;
+   font-weight: bold;
+   font-size: 50px;
+   color: var(--main-color);
+   
+ }
+.landing .text p
+  {
+   font-size: 19px;
+   line-height: 1.8;
+ }
+ 
+ 
+
+.features .container
+{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    justify-content: space-around;
+    gap: 20px;
+}
+.features
+{
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 60px;
+}
+.features .feat
+{
+    padding: 20px;
+    text-align: center;
+  
+}
+.features .feat i
+{
+ color: var(--main-color);
+
+}
+.features .container .feat h3
+{
+    font-weight: 800;
+    margin: 30px 0px;
+}
+.features .container .feat p
+{
+    line-height: 1.8;
+    color: rgb(56, 55, 55);
+}
+
+.special-heading
+{
+    font-size: 100px;
+    color: #b0b4b8;
+    font-weight: 800;
+    letter-spacing: -4px;
+    margin: 0;
+    text-align: center;
+    opacity: 0.35;
+}
+@media (max-width:768px) {
+    .special-heading
+    {
+        font-size: 80px;
+    }
+}
+.special-heading + p
+{
+    text-align: center;
+    margin: -25px;
+    color: #7b7c7c;
+}
+
+.services .services-columns
+{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+}
+.services .services-columns .col .serve
+{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    
+}
+@media (max-width:768px) 
+{
+
+    .services .services-columns .col .serve
+{
+    
+    flex-direction: column-reverse;
+    text-align: center;
+}
+    .services .services-columns 
+{
+    
+    flex-direction: column-reverse;
+    
+}
+
+.services .services-columns .col .serve i
+{
+   position: absolute;
+   left: 45%;
+   margin-top: -25px;
+}
+
+.about  .about-columns .text 
+{
+position: relative;
+text-align: center;
+
+}
+
+
+}
+.services .services-columns .col .serve
+{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.services .services-columns .col .serve p,h3
+{
+  margin: 15px 15px;
+}
+.services .services-columns .col .serve i
+{
+    color: var(--main-color);
+}
+.services .services-columns .col .photo .ph
+{
+    
+    width: 100%;
+    
+}
+ 
+
+/* start portfolio section*/
+.portfolio{
+    margin-top: 30px;
+}
+.portfolio .container .portfolio-columns
+{
+    margin-top: 90px;
+    display: grid;
+   grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 20px;
+    width: 100%;
+    
+}
+.portfolio .container .portfolio-columns .port
+{
+    padding-top: 50px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+}
+.portfolio .container .portfolio-columns .port img
+{
+    margin: 0;
+    width: 100%;
+}
+.portfolio .portfolio-columns .col .port p,h3
+{
+    margin-top: 10px;
+  text-align: center;
+}
+
+/* end portfolio section*/
+
+
+/*start about us section*/
+.about
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+ .about-columns
+{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.about  .about-columns .image 
+{
+position: relative;
+width: 450px;
+height: 450px;
+}
+.about  .about-columns .text 
+{
+position: relative;
+
+}
+.about .about-columns .image img
+{
+max-width: 100%;
+
+}
+
+.about  .about-columns  .regle
+{
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-color);
+}
+.about  .about-columns .text p:first-child
+{
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+.about  .about-columns .text p:last-of-type
+{
+
+  padding-top: 20px;
+}
+/*end about us section*/
+
+/*start contact section*/
+.contact
+{
+    margin-top: 100px;
+}
+
+.contact .text h3
+{
+    font-size: 50px;
+    margin-top: 100px;
+    margin-left:-200px;
+    color: rgb(40, 70, 70);
+    font-weight: 900;
+    letter-spacing: -4px;
+}
+.contact .text a
+{
+    font-size: 40px;
+    font-weight: 900;
+   color: #10cab7;
+    margin-left:150px;
+}
+.contact .social 
+{
+ margin-left: 200px;
+ margin-top: 50px;
+ padding-bottom: 100px;
+ 
+}
+.contact .social p
+{
+ font-weight: bolder;
+ font-size: 20px;
+ display: inline;
+ color: #7b7c7c;
+}
+.contact .social i
+{
+ margin-left: 20px;
+ color: #7b7c7c;
+ 
+}
+@media (max-width:768px) {
+
+    .contact .social i
+{
+    margin-top: 10px;
+ margin-left: 50px;
+ color: #7b7c7c;
+ 
+}
+    .contact .social 
+{
+ margin-left: 20px;
+}
+    .contact .social p
+{
+ margin-left: 10px;
+}
+.contact .text a
+{
+    font-size: 20px;
+    margin-left: 5px;
+}
+.contact .text h3
+{
+    font-size: 25px;
+    margin-left: 20px;
+    letter-spacing: -1px;
+}
+
+}
+/*end contact section*/
+/*start footer section*/
+.footer .container
+{
+    height: 50px;
+   width: 100%;
+   background-color: rgb(30, 65, 65);
+   padding-bottom: 50px;
+}
+.footer .container p
+{
+  text-align: center;
+  font-weight: bold;
+  
+}
+.footer .container p  span
+{
+color: #10cab7;
+
+
+}
+@media (max-width:768px) 
+{
+    .footer .container p  
+{
+
+font-size: 15px;
+}
+}
+/*end footer section*/
+
+html
+{
+    scroll-behavior: smooth;
+}
